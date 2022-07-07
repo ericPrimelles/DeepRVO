@@ -1,0 +1,128 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "examples",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "examples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "RVO",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "DeepNav::@714eac15f71a94114fdf",
+					"jsonFile" : "target-DeepNav-Debug-a8d53a1ab5e90cf2029f.json",
+					"name" : "DeepNav",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ExampleBlocks::@714eac15f71a94114fdf",
+					"jsonFile" : "target-ExampleBlocks-Debug-de0eb8f2d0c3cb7962df.json",
+					"name" : "ExampleBlocks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ExampleCircle::@714eac15f71a94114fdf",
+					"jsonFile" : "target-ExampleCircle-Debug-8e89a59757cda5522597.json",
+					"name" : "ExampleCircle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ExampleRoadmap::@714eac15f71a94114fdf",
+					"jsonFile" : "target-ExampleRoadmap-Debug-fe4c9204ce0245bab100.json",
+					"name" : "ExampleRoadmap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "RVO::@145eef247bfb46b6828c",
+					"jsonFile" : "target-RVO-Debug-40f2a812ba113e7ab563.json",
+					"name" : "RVO",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build",
+		"source" : "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

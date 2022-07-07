@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/RVO.h
+RVOSimulator.h
+../src/RVOSimulator.h
+Vector2.h
+../src/Vector2.h
+RVO.h
+-
+
+../src/RVOSimulator.h
+cstddef
+-
+limits
+-
+vector
+-
+Vector2.h
+../src/Vector2.h
+
+../src/Vector2.h
+cmath
+-
+ostream
+-
+
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleBlocks.cpp
+cmath
+-
+cstdlib
+-
+ctime
+-
+iostream
+-
+vector
+-
+omp.h
+-
+RVO.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/RVO.h
+
