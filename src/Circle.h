@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include <RVO/RVO.h>
+#include "RVO.h"
 #include <vector>
 
 using namespace std;

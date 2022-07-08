@@ -9,9 +9,9 @@
 #include "Circle.h"
 
 #ifdef __APPLE__
-#include <RVO/RVO.h>
+#include "RVO.h"
 #else
-#include<RVO/RVO.h>
+#include"RVO.h"
 #endif
 
 #ifdef __APPLE__
