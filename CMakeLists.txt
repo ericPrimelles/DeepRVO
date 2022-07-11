@@ -59,7 +59,7 @@ project(RVO)
 
 list(APPEND CMAKE_PREFIX_PATH "/home/eric/libtorch")
 find_package( Torch REQUIRED )
-find_package(RVO REQUIRED)
+#find_package(RVO REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 find_package(GLU REQUIRED)
