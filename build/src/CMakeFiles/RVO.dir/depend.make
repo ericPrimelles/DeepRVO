@@ -11751,6 +11751,9 @@ src/CMakeFiles/RVO.dir/Environment.cpp.o: /home/eric/libtorch/include/torch/libr
 src/CMakeFiles/RVO.dir/Environment.cpp.o: ../src/Circle.h
 src/CMakeFiles/RVO.dir/Environment.cpp.o: ../src/Environment.cpp
 src/CMakeFiles/RVO.dir/Environment.cpp.o: ../src/Environment.h
+src/CMakeFiles/RVO.dir/Environment.cpp.o: ../src/RVO.h
+src/CMakeFiles/RVO.dir/Environment.cpp.o: ../src/RVOSimulator.h
+src/CMakeFiles/RVO.dir/Environment.cpp.o: ../src/Vector2.h
 
 src/CMakeFiles/RVO.dir/KdTree.cpp.o: ../src/Agent.h
 src/CMakeFiles/RVO.dir/KdTree.cpp.o: ../src/Definitions.h
@@ -15677,6 +15680,9 @@ src/CMakeFiles/RVO.dir/MADDPG.cpp.o: ../src/DDPGAgent.h
 src/CMakeFiles/RVO.dir/MADDPG.cpp.o: ../src/Environment.h
 src/CMakeFiles/RVO.dir/MADDPG.cpp.o: ../src/MADDPG.cpp
 src/CMakeFiles/RVO.dir/MADDPG.cpp.o: ../src/MADDPG.h
+src/CMakeFiles/RVO.dir/MADDPG.cpp.o: ../src/RVO.h
+src/CMakeFiles/RVO.dir/MADDPG.cpp.o: ../src/RVOSimulator.h
+src/CMakeFiles/RVO.dir/MADDPG.cpp.o: ../src/Vector2.h
 
 src/CMakeFiles/RVO.dir/Obstacle.cpp.o: ../src/Definitions.h
 src/CMakeFiles/RVO.dir/Obstacle.cpp.o: ../src/Obstacle.cpp

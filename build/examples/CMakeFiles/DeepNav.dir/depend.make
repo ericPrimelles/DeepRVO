@@ -6,6 +6,9 @@ examples/CMakeFiles/DeepNav.dir/main.cpp.o: ../src/Circle.h
 examples/CMakeFiles/DeepNav.dir/main.cpp.o: ../src/DDPGAgent.h
 examples/CMakeFiles/DeepNav.dir/main.cpp.o: ../src/Environment.h
 examples/CMakeFiles/DeepNav.dir/main.cpp.o: ../src/MADDPG.h
+examples/CMakeFiles/DeepNav.dir/main.cpp.o: ../src/RVO.h
+examples/CMakeFiles/DeepNav.dir/main.cpp.o: ../src/RVOSimulator.h
+examples/CMakeFiles/DeepNav.dir/main.cpp.o: ../src/Vector2.h
 examples/CMakeFiles/DeepNav.dir/main.cpp.o: /home/eric/libtorch/include/ATen/ATen.h
 examples/CMakeFiles/DeepNav.dir/main.cpp.o: /home/eric/libtorch/include/ATen/CPUGeneratorImpl.h
 examples/CMakeFiles/DeepNav.dir/main.cpp.o: /home/eric/libtorch/include/ATen/Config.h

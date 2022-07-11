@@ -15,8 +15,8 @@ algorithm
 -
 
 ../src/Circle.h
-RVO/RVO.h
--
+RVO.h
+../src/RVO.h
 vector
 -
 
@@ -35,10 +35,10 @@ vector
 -
 Circle.h
 ../src/Circle.h
-RVO/RVO.h
--
-RVO/RVO.h
--
+RVO.h
+../src/RVO.h
+RVO.h
+../src/RVO.h
 GLUT/glut.h
 -
 GL/freeglut.h
@@ -60,6 +60,30 @@ Buffer.h
 vector
 -
 string
+-
+
+../src/RVO.h
+RVOSimulator.h
+../src/RVOSimulator.h
+Vector2.h
+../src/Vector2.h
+RVO.h
+-
+
+../src/RVOSimulator.h
+cstddef
+-
+limits
+-
+vector
+-
+Vector2.h
+../src/Vector2.h
+
+../src/Vector2.h
+cmath
+-
+ostream
 -
 
 /home/eric/libtorch/include/ATen/ATen.h
@@ -81533,8 +81557,8 @@ vector
 -
 torch/torch.h
 -
-RVO/RVO.h
--
+RVO.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/RVO.h
 Environment.h
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/Environment.h
 MADDPG.h

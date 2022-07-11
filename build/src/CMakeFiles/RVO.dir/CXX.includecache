@@ -81470,26 +81470,6 @@ ATen/core/op_registration/op_registration.h
 torch/custom_class.h
 -
 
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.cpp
-Agent.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.h
-KdTree.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.h
-Obstacle.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.h
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.h
-Definitions.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Definitions.h
-RVOSimulator.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.h
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.cpp
-Buffer.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.h
-random
--
-
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.h
 torch/torch.h
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/torch/torch.h
@@ -81499,14 +81479,10 @@ algorithm
 -
 
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Circle.h
-RVO/RVO.h
--
+RVO.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVO.h
 vector
 -
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.cpp
-DDPGAgent.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.h
 
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.h
 vector
@@ -81515,18 +81491,6 @@ torch/torch.h
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/torch/torch.h
 string
 -
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Definitions.h
-cmath
--
-cstddef
--
-limits
--
-vector
--
-Vector2.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Vector2.h
 
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.cpp
 Environment.h
@@ -81541,10 +81505,10 @@ vector
 -
 Circle.h
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Circle.h
-RVO/RVO.h
--
-RVO/RVO.h
--
+RVO.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVO.h
+RVO.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVO.h
 GLUT/glut.h
 -
 GL/freeglut.h
@@ -81553,20 +81517,6 @@ GL/gl.h
 -
 GL/glu.h
 -
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.cpp
-KdTree.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.h
-Agent.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.h
-RVOSimulator.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.h
-Obstacle.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.h
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.h
-Definitions.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Definitions.h
 
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/MADDPG.cpp
 MADDPG.h
@@ -81590,26 +81540,12 @@ vector
 string
 -
 
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.cpp
-Obstacle.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVO.h
 RVOSimulator.h
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.h
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.h
-Definitions.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Definitions.h
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.cpp
-RVOSimulator.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.h
-Agent.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.h
-KdTree.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.h
-Obstacle.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.h
-omp.h
+Vector2.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Vector2.h
+RVO.h
 -
 
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.h

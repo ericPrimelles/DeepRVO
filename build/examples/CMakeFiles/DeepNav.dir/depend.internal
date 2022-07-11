@@ -7,6 +7,9 @@ examples/CMakeFiles/DeepNav.dir/main.cpp.o
  ../src/DDPGAgent.h
  ../src/Environment.h
  ../src/MADDPG.h
+ ../src/RVO.h
+ ../src/RVOSimulator.h
+ ../src/Vector2.h
  /home/eric/libtorch/include/ATen/ATen.h
  /home/eric/libtorch/include/ATen/CPUGeneratorImpl.h
  /home/eric/libtorch/include/ATen/Config.h
