@@ -20,7 +20,7 @@ float max_speed = 1.5f;
 
 // Train Hyperparameters
 size_t k_epochs = 10000;
-size_t T = 1000;
+size_t T = 10000;
 size_t batch_size = 256;
 
 size_t scenario = 1, sidesize = 25;
