@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RVO"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Torch\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\;CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\public\;CMake Files\src\;CMake Files\examples\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RVO">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/libRVO.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 RVO"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RVO/fast">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/libRVO.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 RVO/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExampleBlocks">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/ExampleBlocks" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 ExampleBlocks"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExampleBlocks/fast">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/ExampleBlocks" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 ExampleBlocks/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExampleCircle">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/ExampleCircle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 ExampleCircle"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExampleCircle/fast">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/ExampleCircle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 ExampleCircle/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExampleRoadmap">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/ExampleRoadmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 ExampleRoadmap"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExampleRoadmap/fast">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/ExampleRoadmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 ExampleRoadmap/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DeepNav">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/DeepNav" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 DeepNav"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DeepNav/fast">
+				<Option output="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/DeepNav" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSE_DISTRIBUTED"/>
+					<Add option="-DUSE_C10D_GLOO"/>
+					<Add option="-DUSE_RPC"/>
+					<Add option="-DUSE_TENSORPIPE"/>
+					<Add directory="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src"/>
+					<Add directory="/home/eric/libtorch/include"/>
+					<Add directory="/home/eric/libtorch/include/torch/csrc/api/include"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 DeepNav/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/media/eric/New\ Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/cmake-build-debug/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleBlocks.cpp">
+			<Option target="ExampleBlocks"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleCircle.cpp">
+			<Option target="ExampleCircle"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleRoadmap.cpp">
+			<Option target="ExampleRoadmap"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/main.cpp">
+			<Option target="DeepNav"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.cpp">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.cpp">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.cpp">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Definitions.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.cpp">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.cpp">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/MADDPG.cpp">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/MADDPG.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.cpp">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVO.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.cpp">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Vector2.h">
+			<Option target="RVO"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Torch/TorchConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Torch\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Torch/TorchConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Torch\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Caffe2/Caffe2Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Caffe2/Caffe2ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Caffe2/Caffe2Targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Caffe2/Caffe2Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Caffe2/public/mkl.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\public\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Caffe2/public/mkldnn.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\public\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Caffe2/public/threads.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\public\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/../../../../../../../../../../home/eric/libtorch/share/cmake/Caffe2/public/utils.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\home\eric\libtorch\share\cmake\Caffe2\public\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\examples\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
