@@ -27,6 +27,7 @@ public:
     void Train(vector<ReplayBuffer::Transition> sampledTrans);
     void Test(size_t epochs);
     size_t getNAgents(){return n_agents;}
+    inline DDPGAgent* getAgent(size_t i){ return agents[i];}
 
     ~MADDPG();
 

@@ -25,7 +25,7 @@ MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vecto
     this->path = path;
 
     // this->agents.reserve(this->n_agents);
-    cout << n_agents << endl;
+    
     for (size_t i = 0; i < n_agents; i++)
     {
         this->agents.push_back(new DDPGAgent(this->Ain_dims, this->Aout_dims, Ah_dims, this->Cin_dims, this->Cout_dims, Ch_dims,
@@ -36,10 +36,7 @@ MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vecto
 
 MADDPG::~MADDPG()
 {
-    for (size_t i = 0; i < this->n_agents; i++)
-    {
-        delete agents[i];
-    }
+   
 }
 
 void MADDPG::saveCheckpoint()
@@ -55,12 +52,14 @@ void MADDPG::saveCheckpoint()
 void MADDPG::loadCheckpoint()
 {
     cout << "...loading chekpoint..." << endl;
-
+    
     for (size_t i = 0; i < this->n_agents; i++)
     {
         agents[i]->loadModel(this->path, i);
     }
+    
 }
+
 
 torch::Tensor MADDPG::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net)
 {

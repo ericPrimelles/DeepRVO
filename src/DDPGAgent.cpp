@@ -23,10 +23,19 @@ DDPGAgent::~DDPGAgent()
 void DDPGAgent::loadModel(std::string path, size_t i)
 {
     std::string indx = std::to_string(i);
+
+   
+    
     torch::load(this->a_n, path + "ddpg-action-checkpoint-" + indx + ".pt" );
+    
     torch::load(this->target_a_n, path + "ddpg-action-target-checkpoint-"+ indx + ".pt");
+    
     torch::load(this->a_optim, path + "ddpg-action-optimizer-checkpoint-"+ indx + ".pt");
-    torch::load(this->c_n, path + "ddpg-q-checkpoint-"+ indx + "-.pt");
+    
+    
+    torch::load(this->c_n, path + "ddpg-q-checkpoint-"+ indx + ".pt");
+    
+    
     torch::load(this->target_c_n, path + "ddpg-q-target-checkpoint-"+ indx + ".pt");
     torch::load(this->c_optim, path + "ddpg-q-optimizer-checkpoint-"+ indx + ".pt");
 }

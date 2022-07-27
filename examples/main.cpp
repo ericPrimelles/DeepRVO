@@ -37,7 +37,7 @@ bool train = true;
 // Exec functions
 
 void Train(Environment *env, MADDPG program);
-
+void Test (Environment * env, MADDPG program, size_t n_epochs);
 
 // Visualization func
 void InitGL(void);
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
    env->make(1);
    MADDPG program(env, 4, 2, {32, 16, 8}, 6, 1, {32, 16, 8}, 0);
 
-   glutInit(&argc, argv);
+   /*glutInit(&argc, argv);
    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
    glutInitWindowSize(800, 600);
    glutCreateWindow("Deep Nav");
@@ -59,9 +59,23 @@ int main(int argc, char **argv)
    InitGL();
    glutDisplayFunc(updateVisualization);
    glutReshapeFunc(reshape);
-   glutIdleFunc(idle);
+   glutIdleFunc(idle);*/
+   
+   // DEVICE setting
+   torch::Device device(torch::kCPU);
+   if (torch::cuda::is_available()){
+      cout << "CUDA is available" << endl;
+      device = torch::Device(torch::kCUDA);
+   } else{
+      cout << "CUDA isn't available. Using CPU" << endl;
+   }
+   for(int i = 0; i < program.getNAgents(); i ++){
+      program.getAgent(i)->a_n->to(device);
+      program.getAgent(i)->c_n->to(device);
+      program.getAgent(i)->target_a_n->to(device);
+      program.getAgent(i)->target_c_n->to(device);
+   }
 
-   Train(env, program);
    return 0;
 }
 
@@ -113,7 +127,19 @@ void Train(Environment *env, MADDPG program)
       write.close();
    }
 }
-
+void Test (Environment * env, MADDPG program, size_t n_epochs){
+   
+   program.loadCheckpoint();
+   
+   for(int i = 0; i < n_epochs; i++){
+      env->reset();
+      for (int step = 0; step < T || env->isDone(); step ++){
+         auto obs = env->getObservation();
+         auto act = program.chooseAction(obs, false, true);
+         auto rwds = env->step(act);
+      }
+   }
+}
 void InitGL(void) // OpenGL function
 {
 
