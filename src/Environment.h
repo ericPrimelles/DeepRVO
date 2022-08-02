@@ -35,7 +35,7 @@ public:
     torch::Tensor step(torch::Tensor actions);
     torch::Tensor sample();
     torch::Tensor getObservation();
-    void render();
+    void render(size_t T, size_t epoch);
     void reset();
     void make(size_t scenario);
     bool isDone();
@@ -45,6 +45,7 @@ public:
     inline size_t getNAgents(){return this->sim->getNumAgents();}
     inline float getGlobalTime(){ return this->time;}
     inline Vector2 getAgentPrefVel(size_t i){return this->sim->getAgentPrefVelocity(i);}
+    inline float getTimeStep(){return this->timestep;}
     ~Environment();
 
 private:

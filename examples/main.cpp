@@ -76,6 +76,8 @@ int main(int argc, char **argv)
       program.getAgent(i)->target_c_n->to(device);
    }
 
+   Train(env, program);
+
    return 0;
 }
 
@@ -102,6 +104,9 @@ void Train(Environment *env, MADDPG program)
          a.obs_1 = env->getObservation();
          a.done = env->isDone();
          memory->storeTransition(a);
+         env->render(j, i);
+
+         cout << "Global time:" << env->getGlobalTime()<< endl;
 
          sampledTrans = memory->sampleBuffer();
          if (memory->ready())
@@ -137,6 +142,7 @@ void Test (Environment * env, MADDPG program, size_t n_epochs){
          auto obs = env->getObservation();
          auto act = program.chooseAction(obs, false, true);
          auto rwds = env->step(act);
+         env->render(i, 0);
       }
    }
 }

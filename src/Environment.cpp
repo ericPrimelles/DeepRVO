@@ -1,5 +1,7 @@
 #include "Environment.h"
 #include "Circle.h"
+#include <iostream>
+#include <string>
 
 Environment::Environment(size_t n_agents, float time_step, float neighbor_dists, size_t max_neig, float time_horizon,
                          float time_horizon_obst, float radius, float max_speed)
@@ -9,7 +11,8 @@ Environment::Environment(size_t n_agents, float time_step, float neighbor_dists,
     this->sim = new RVOSimulator();
     this->sim->setTimeStep(0.25f);
     this->sim->setAgentDefaults(neighbor_dists, max_neig, time_horizon, time_horizon_obst, radius, max_speed);
-    this->timestep = timestep;
+    this->timestep = time_step;
+    this->time = 0.0f;
     this->neigh_dist = neigh_dist;
     this->max_neigh = max_neig, this->time_horizont = time_horizon;
     this->time_horizont_obst = time_horizon_obst;
@@ -176,9 +179,38 @@ torch::Tensor Environment::getObservation()
 
 // Visualization
 
-void Environment::render()
+void Environment::render(size_t T, size_t epoch)
 {
-    
+    string name = "Episode_" + to_string(epoch) + ".txt";
+    ofstream  write(name, std::ios_base::app);
+
+    if (write.is_open()) {
+        if (T == 0) {
+            write << "id,gid,x,y,dir_x,dir_y,radius,time\n";
+        }
+        
+        for (int i = 0; i < this->n_agents; i++) {
+            write << to_string(i);
+            write << ",";
+            write << to_string(0);
+            write << ",";
+            write << to_string(this->sim->getAgentPosition(i).x());
+            write << ",";
+            write << to_string(this->sim->getAgentPosition(i).y());
+            write << ",";
+            write << to_string(this->sim->getAgentPrefVelocity(i).x());
+            write << ",";
+            write << to_string(this->sim->getAgentPrefVelocity(i).y());
+            write << ",";
+            write << to_string(this->sim->getAgentRadius(i));
+            write << ",";
+            write << to_string(this->getGlobalTime());
+            
+            write << "\n";
+        }
+        
+        write.close();
+    }
 }
 
 void Environment::reset()
