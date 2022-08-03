@@ -30,7 +30,7 @@ float traj_a_loss = 0.0f;
 float avg_reward = 0.0f;
 float step_rewards = 0.0f;
 Environment *env = new Environment(Agents, timestep, neighbor_dist, max_neig, time_horizont, time_horizont_obst, radius, max_speed);
-
+torch::Device device(torch::kCPU);
 
 // Execution parameters
 bool train = true;
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
    
    if (torch::cuda::is_available()){
       cout << "CUDA is available" << endl;
-      torch::Device device(torch::kCUDA);;
+      device = torch::Device(torch::kCUDA);
       for(int i = 0; i < program.getNAgents(); i ++){
       program.getAgent(i)->a_n->to(device);
       program.getAgent(i)->c_n->to(device);
@@ -99,10 +99,10 @@ void Train(Environment *env, MADDPG program)
          cout << "Epoch: " << i << "/" << k_epochs << " ";
          std::cout << "TimeStep:" << j << "/" << T << " Rewards:"
                    << "    " << avg_reward << std::endl;
-         a.obs = env->getObservation();
-         a.actions = program.chooseAction(a.obs, true, memory->ready());
-         a.rewards = env->step(a.actions);
-         a.obs_1 = env->getObservation();
+         a.obs = env->getObservation().to(device);
+         a.actions = program.chooseAction(a.obs, true, memory->ready()).to(device);
+         a.rewards = env->step(a.actions).to(device);
+         a.obs_1 = env->getObservation().to(device);
          a.done = env->isDone();
          memory->storeTransition(a);
          env->render(j, i);
