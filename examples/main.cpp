@@ -62,19 +62,20 @@ int main(int argc, char **argv)
    glutIdleFunc(idle);*/
    
    // DEVICE setting
-   torch::Device device(torch::kCPU);
+   
    if (torch::cuda::is_available()){
       cout << "CUDA is available" << endl;
-      device = torch::Device(torch::kCUDA);
-   } else{
-      cout << "CUDA isn't available. Using CPU" << endl;
-   }
-   for(int i = 0; i < program.getNAgents(); i ++){
+      torch::Device device(torch::kCUDA);;
+      for(int i = 0; i < program.getNAgents(); i ++){
       program.getAgent(i)->a_n->to(device);
       program.getAgent(i)->c_n->to(device);
       program.getAgent(i)->target_a_n->to(device);
       program.getAgent(i)->target_c_n->to(device);
    }
+   } else{
+      cout << "CUDA isn't available. Using CPU" << endl;
+   }
+   
 
    Train(env, program);
 
