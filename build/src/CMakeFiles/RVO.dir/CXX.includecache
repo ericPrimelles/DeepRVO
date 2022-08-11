@@ -81470,26 +81470,22 @@ ATen/core/op_registration/op_registration.h
 torch/custom_class.h
 -
 
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.h
-torch/torch.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/torch/torch.h
-vector
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/vector
-algorithm
--
-
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Circle.h
 RVO.h
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVO.h
 vector
 -
 
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.h
-vector
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.cpp
+Environment.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.h
+Circle.h
+/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Circle.h
+iostream
 -
-torch/torch.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/torch/torch.h
 string
+-
+cmath
 -
 
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.h
@@ -81510,28 +81506,6 @@ GL/freeglut.h
 GL/gl.h
 -
 GL/glu.h
--
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/MADDPG.cpp
-MADDPG.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/MADDPG.h
-iostream
--
-fstream
--
-
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/MADDPG.h
-torch/torch.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/torch/torch.h
-Environment.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.h
-DDPGAgent.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.h
-Buffer.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.h
-vector
--
-string
 -
 
 /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVO.h

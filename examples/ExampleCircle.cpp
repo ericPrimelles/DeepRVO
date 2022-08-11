@@ -89,7 +89,7 @@ void setupScenario(RVO::RVOSimulator *sim)
 	 * Add agents, specifying their start position, and store their goals on the
 	 * opposite side of the environment.
 	 */
-	for (size_t i = 0; i < 250; ++i) {
+	for (size_t i = 0; i < 2; ++i) {
 		sim->addAgent(200.0f *
 		              RVO::Vector2(std::cos(i * 2.0f * M_PI / 250.0f),
 		                           std::sin(i * 2.0f * M_PI / 250.0f)));
@@ -125,7 +125,7 @@ void setPreferredVelocities(RVO::RVOSimulator *sim)
 		if (RVO::absSq(goalVector) > 1.0f) {
 			goalVector = RVO::normalize(goalVector);
 		}
-
+		//std::cout << "GOAL VECTOR" << goalVector << std::endl;
 		sim->setAgentPrefVelocity(i, goalVector);
 	}
 }
@@ -151,12 +151,14 @@ int main(int argc, const char *argv[])
 	setupScenario(sim);
 
 	/* Perform (and manipulate) the simulation. */
+	int i = 0;
 	do {
 		updateVisualization(sim);
 		setPreferredVelocities(sim);
 		sim->doStep();
+		i ++;
 	}
-	while (!reachedGoal(sim));
+	while (!reachedGoal(sim) && i < 100);
 
 	delete sim;
 

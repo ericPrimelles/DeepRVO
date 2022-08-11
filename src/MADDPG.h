@@ -36,6 +36,7 @@ private:
     //Private Methods
     void visualize();
     void learn(vector<ReplayBuffer::Transition>);
+    torch::Tensor eval(torch::Tensor obs);
     // Parameters
     int64_t Ain_dims, Aout_dims, Cin_dims, Cout_dims;
     size_t scenario, batch_size, n_agents;

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 
+
 using std::cout, std::endl;
 
 MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vector<int64_t> Ah_dims, int64_t Cin_dims, int64_t Cout_dims, std::vector<int64_t> Ch_dims,
@@ -64,7 +65,7 @@ void MADDPG::loadCheckpoint()
 torch::Tensor MADDPG::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net)
 {
     cout << "From MADDPG" << this->n_agents << endl;
-    torch::Tensor actions = torch::zeros({(int64_t)this->n_agents, 2}, torch::dtype(torch::kFloat32));
+    torch::Tensor actions = torch::zeros({(int64_t)this->n_agents, 8}, torch::dtype(torch::kFloat32));
 
     if (use_net)
     {
@@ -118,7 +119,6 @@ void MADDPG::visualize()
 
 void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
 {
-
     // Cut from here
     for (size_t agent = 0; agent < this->n_agents; agent++)
     {
@@ -133,30 +133,58 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
         {
             torch::Tensor target;
             torch::Tensor ret;
+            
+
             if (!t.done)
             {
-
-                ret = this->gamma * agents[agent]->target_c_n(torch::cat({t.obs_1[agent], this->agents[agent]->target_a_n(t.obs_1[agent])})).detach();
+                
+                
+                
+                
+                ret = this->gamma * agents[agent]->target_c_n(torch::cat({t.obs_1.flatten(), this->eval(t.obs_1).flatten()})).detach();
                 target = t.rewards[agent] + ret;
+                
             }
             else
             {
 
-                target = t.rewards[agent] * torch::ones({1});
+                target = t.rewards[agent] * torch::ones({8});
             }
-            torch::Tensor seg_loss = this->agents[agent]->target_c_n(torch::cat({t.obs[agent], t.actions[agent]}).detach()) - target;
+
+            
+            torch::Tensor seg_loss = this->agents[agent]->target_c_n(torch::cat({t.obs.flatten(), t.actions.flatten()}).detach()) - target;
+            
             q_loss += memsize_scale * seg_loss * seg_loss;
+            
         }
         q_loss.backward();
         this->agents[agent]->c_optim.step();
+        
         //*traj_q_loss += q_loss.item<float>();
         for (auto &t : sampledTrans)
         {
-            a_loss -= memsize_scale * this->agents[agent]->c_n(torch::cat({t.obs[agent], this->agents[agent]->a_n(t.obs[agent])}).detach());
+            a_loss -= memsize_scale * this->agents[agent]->c_n(torch::cat({t.obs.flatten(), this->eval(t.obs).flatten()}).detach());
+            
         }
         a_loss.backward();
         this->agents[agent]->a_optim.step();
         //*traj_a_loss += a_loss.item<float>();
         this->agents[agent]->updateParameters(tau);
     }
+}
+
+torch::Tensor MADDPG::eval(torch::Tensor obs){
+    
+    torch::Tensor evaluation = torch::empty({(int64_t)this->getNAgents(), 8});
+    
+    
+    for (size_t agentx = 0; agentx < this->getNAgents(); agentx++)
+                {
+                    evaluation[agentx] = this->agents[agentx]->target_a_n(obs[agentx]);
+                    
+                }
+    
+    
+    return evaluation;
+    
 }

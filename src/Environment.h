@@ -37,7 +37,7 @@ public:
     torch::Tensor getObservation();
     void render(size_t T, size_t epoch);
     void reset();
-    void make(size_t scenario);
+    void make(size_t scenario, bool extended);
     bool isDone();
     inline size_t getActionsSpec(){return 2;}
     inline vector<size_t> getObservationSpec(){return {this->n_agents, 4};}
@@ -46,6 +46,7 @@ public:
     inline float getGlobalTime(){ return this->time;}
     inline Vector2 getAgentPrefVel(size_t i){return this->sim->getAgentPrefVelocity(i);}
     inline float getTimeStep(){return this->timestep;}
+    inline size_t getActionSpace(){return 8;}
     ~Environment();
 
 private:
@@ -61,12 +62,14 @@ private:
    
 
     //Parameters
+    vector<Vector2> actions;
     RVOSimulator * sim;
     size_t scenario = 0, sidesize=25;
     float time= 0.0f;
     size_t n_agents, max_neigh;
     float timestep, neigh_dist, time_horizont, time_horizont_obst, radius, max_speed;
     std::vector<RVO::Vector2> positions, goals, obstacles;
+    bool extended;
 
     
     

@@ -2,7 +2,7 @@
 #include "Circle.h"
 #include <iostream>
 #include <string>
-
+#include <cmath>
 Environment::Environment(size_t n_agents, float time_step, float neighbor_dists, size_t max_neig, float time_horizon,
                          float time_horizon_obst, float radius, float max_speed)
 {
@@ -18,15 +18,19 @@ Environment::Environment(size_t n_agents, float time_step, float neighbor_dists,
     this->time_horizont_obst = time_horizon_obst;
     this->radius = radius;
     this->max_speed = max_speed;
+
+   actions = {Vector2(1, 0), Vector2(0.707, 0.707), Vector2(0, 1), Vector2(-0.707, 0.707), Vector2(-1, 0), Vector2(-0.707, -0.707),Vector2(0, -1),Vector2(0.707, -0.707)};
+   
 }
 
 
 
-void Environment::make(size_t scenario_op)
+void Environment::make(size_t scenario_op, bool extended = false)
 {
     this->scenario = scenario_op;
     this->setupScenario(scenario_op);
     this->setup(this->positions, this->obstacles);
+    this->extended = extended;
     
 }
 
@@ -68,22 +72,24 @@ torch::Tensor Environment::step(torch::Tensor actions)
     return this->calculateGlobalReward() + this->calculateLocalReward();
 }
 
-void Environment::setPrefferedVelocities(torch::Tensor actions)
+void Environment::setPrefferedVelocities(torch::Tensor act)
 {
 
     float x = 0.0f, y = 0.0f;
     Vector2 v_pref_placeholder;
+    
     for (size_t i = 0; i < this->n_agents; i++)
     {
         // Detacching tensors
-        x = actions[i][0].item<float>();
+        /*x = actions[i][0].item<float>();
         y = actions[i][1].item<float>();
         v_pref_placeholder = Vector2(x, y); // Constructing a new Vector2 with the agent i action
-
-        if (absSq(v_pref_placeholder) > 1.0f)
+        */
+        v_pref_placeholder = this->actions[act[i].argmax().item<int>()];
+        /*if (absSq(v_pref_placeholder) > 1.0f)
         {
             v_pref_placeholder = RVO::normalize(v_pref_placeholder);
-        } // Normilizing vector
+        } // Normilizing vector*/
 
         this->sim->setAgentPrefVelocity(i, v_pref_placeholder);
     }
@@ -93,7 +99,7 @@ void Environment::setPrefferedVelocities(torch::Tensor actions)
 torch::Tensor Environment::sample()
 {
 
-    auto actions = torch::rand({(int64_t)this->n_agents, 2}, torch::dtype(torch::kFloat32));
+    auto actions = torch::rand({(int64_t)this->n_agents, 8}, torch::dtype(torch::kFloat32));
     return this->step(actions);
 }
 
@@ -162,6 +168,10 @@ torch::Tensor Environment::calculateLocalReward()
 
 torch::Tensor Environment::getObservation()
 {
+    if (extended){
+        int64_t nAgents = this->getNAgents();
+    }
+
     int64_t nAgents = this->getNAgents();
     torch::Tensor observation = torch::zeros({(int64_t)this->n_agents, 4}, torch::dtype(torch::kFloat32));
     std::vector<std::vector<float>> data;
@@ -169,7 +179,7 @@ torch::Tensor Environment::getObservation()
 
     for (size_t i = 0; i < this->getNAgents(); i++)
     {
-        data.push_back({this->getAgentPos(i).x(), this->getAgentPos(i).y(), this->sim->getAgentPrefVelocity(i).x(), this->sim->getAgentPrefVelocity(i).y()});
+        data.push_back({this->getAgentPos(i).x(), this->getAgentPos(i).y(), this->goals[i].x(), this->goals[i].y()});
         size = data[i].size();
 
         observation[i] = torch::from_blob(data[i].data(), {size});

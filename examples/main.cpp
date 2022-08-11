@@ -5,6 +5,7 @@
 #include "Environment.h"
 #include "MADDPG.h"
 #include "Buffer.h"
+
 using namespace std;
 using namespace RVO;
 
@@ -16,10 +17,10 @@ size_t max_neig = Agents;
 float time_horizont = 10.0f;
 float time_horizont_obst = 20.0f;
 float radius = 2.0f;
-float max_speed = 1.5f;
+float max_speed = 3.5f;
 
 // Train Hyperparameters
-size_t k_epochs = 10000;
+size_t k_epochs = 1000;
 size_t T = 10000;
 size_t batch_size = 256;
 
@@ -48,8 +49,8 @@ void updateVisualization();
 
 int main(int argc, char **argv)
 {
-   env->make(1);
-   MADDPG program(env, 4, 2, {32, 16, 8}, 6, 1, {32, 16, 8}, 0);
+   env->make(1, false);
+   MADDPG program(env, 4, 8, {32, 16, 8}, 4*env->getNAgents() + 8*env->getNAgents(), 1, {32, 16, 8}, 0);
 
    /*glutInit(&argc, argv);
    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
@@ -76,9 +77,11 @@ int main(int argc, char **argv)
       cout << "CUDA isn't available. Using CPU" << endl;
    }
    
-
+   
    Train(env, program);
 
+  
+   
    return 0;
 }
 
@@ -108,7 +111,7 @@ void Train(Environment *env, MADDPG program)
          env->render(j, i);
 
          cout << "Global time:" << env->getGlobalTime()<< endl;
-
+         
          sampledTrans = memory->sampleBuffer();
          if (memory->ready())
             program.Train(sampledTrans);
