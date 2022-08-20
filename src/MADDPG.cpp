@@ -84,10 +84,10 @@ torch::Tensor MADDPG::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net
     return actions;
 }
 
-void MADDPG::Train(vector<ReplayBuffer::Transition> sampledTrans)
+void MADDPG::Train(vector<ReplayBuffer::Transition> sampledTrans, torch::Device device)
 {
 
-    this->learn(sampledTrans);
+    this->learn(sampledTrans, device);
 }
 
 void MADDPG::Test(size_t epochs)
@@ -117,7 +117,7 @@ void MADDPG::visualize()
     std::cout << std::endl;
 }
 
-void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
+void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans, torch::Device device)
 {
     // Cut from here
     for (size_t agent = 0; agent < this->n_agents; agent++)
@@ -126,8 +126,9 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
         this->agents[agent]->a_optim.zero_grad();
         this->agents[agent]->c_optim.zero_grad();
         float memsize_scale = 1.0f / static_cast<float>(this->batch_size);
-        torch::Tensor q_loss = torch::zeros({1});
-        torch::Tensor a_loss = torch::zeros({1});
+        torch::Tensor q_loss = torch::zeros({1}).to(device);
+        torch::Tensor a_loss = torch::zeros({1}).to(device);
+        
 
         for (auto &t : sampledTrans)
         {
@@ -141,18 +142,18 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
                 
                 
                 
-                ret = this->gamma * agents[agent]->target_c_n(torch::cat({t.obs_1.flatten(), this->eval(t.obs_1).flatten()})).detach();
+                ret = this->gamma * agents[agent]->target_c_n(torch::cat({t.obs_1.flatten(), this->eval(t.obs_1).flatten()}).to(device)).detach();
                 target = t.rewards[agent] + ret;
                 
             }
             else
             {
 
-                target = t.rewards[agent] * torch::ones({8});
+                target = t.rewards[agent] * torch::ones({8}).to(device);
             }
 
             
-            torch::Tensor seg_loss = this->agents[agent]->target_c_n(torch::cat({t.obs.flatten(), t.actions.flatten()}).detach()) - target;
+            torch::Tensor seg_loss = this->agents[agent]->target_c_n(torch::cat({t.obs.flatten(), t.actions.flatten()}).to(device).detach()) - target;
             
             q_loss += memsize_scale * seg_loss * seg_loss;
             
@@ -163,7 +164,7 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
         //*traj_q_loss += q_loss.item<float>();
         for (auto &t : sampledTrans)
         {
-            a_loss -= memsize_scale * this->agents[agent]->c_n(torch::cat({t.obs.flatten(), this->eval(t.obs).flatten()}).detach());
+            a_loss -= memsize_scale * this->agents[agent]->c_n(torch::cat({t.obs.flatten(), this->eval(t.obs).flatten()}).to(device).detach());
             
         }
         a_loss.backward();

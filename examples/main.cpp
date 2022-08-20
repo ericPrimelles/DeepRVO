@@ -114,7 +114,7 @@ void Train(Environment *env, MADDPG program)
          
          sampledTrans = memory->sampleBuffer();
          if (memory->ready())
-            program.Train(sampledTrans);
+            program.Train(sampledTrans, device);
 
          step_rewards += torch::mean(a.rewards).item<float>();
          avg_reward = step_rewards / (j + 1);
