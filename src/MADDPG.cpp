@@ -129,6 +129,12 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans, torch::Device 
         torch::Tensor q_loss = torch::zeros({1}).to(device);
         torch::Tensor a_loss = torch::zeros({1}).to(device);
         
+        cout << "--------------TENSOR REVIEW--------------" << endl
+             << "Observation: " << sampledTrans[0].obs.device() << endl
+             << "Futher obsn: " <<  sampledTrans[0].obs_1.device() << endl
+             << "Actions: " <<  sampledTrans[0].actions.device() << endl
+             << "Rewards: " << sampledTrans[0].rewards.device() << endl
+             << "Evaluation: " << this->agents[0]->a_n(sampledTrans[0].obs[0]).device() << endl;
 
         for (auto &t : sampledTrans)
         {
@@ -142,8 +148,8 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans, torch::Device 
                 
                 
                 
-                ret = this->gamma * agents[agent]->target_c_n(torch::cat({t.obs_1.flatten(), this->eval(t.obs_1).flatten()}).to(device)).detach();
-                target = t.rewards[agent] + ret;
+                ret = (this->gamma * agents[agent]->target_c_n(torch::cat({t.obs_1.flatten(), this->eval(t.obs_1).flatten()}).to(device)).detach()).to(device);
+                target = (t.rewards[agent] + ret).to(device);
                 
             }
             else
