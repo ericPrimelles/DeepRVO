@@ -103,7 +103,7 @@ void Train(Environment *env, MADDPG program)
          std::cout << "TimeStep:" << j << "/" << T << " Rewards:"
                    << "    " << avg_reward << std::endl;
          a.obs = env->getObservation().to(device);
-         a.actions = program.chooseAction(a.obs, true, memory->ready()).to(device);
+         a.actions = program.chooseAction(a.obs, device,true,memory->ready()).to(device);
          a.rewards = env->step(a.actions).to(device);
          a.obs_1 = env->getObservation().to(device);
          a.done = env->isDone();
@@ -138,17 +138,17 @@ void Train(Environment *env, MADDPG program)
 }
 void Test (Environment * env, MADDPG program, size_t n_epochs){
    
-   program.loadCheckpoint();
+   /*program.loadCheckpoint();
    
    for(int i = 0; i < n_epochs; i++){
       env->reset();
       for (int step = 0; step < T || env->isDone(); step ++){
          auto obs = env->getObservation();
-         auto act = program.chooseAction(obs, false, true);
+         //auto act = program.chooseAction(obs, false, true);
          auto rwds = env->step(act);
          env->render(i, 0);
       }
-   }
+   }*/
 }
 void InitGL(void) // OpenGL function
 {
