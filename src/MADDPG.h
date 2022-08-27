@@ -23,7 +23,7 @@ public:
            std::string path="");
     void saveCheckpoint();
     void loadCheckpoint();
-    torch::Tensor chooseAction(torch::Tensor obs, bool use_rnd = true, bool use_net = true);
+    torch::Tensor chooseAction(torch::Tensor obs, torch::Device device,bool use_rnd = true, bool use_net = true);
     void Train(vector<ReplayBuffer::Transition> sampledTrans, torch::Device device);
     void Test(size_t epochs);
     size_t getNAgents(){return n_agents;}

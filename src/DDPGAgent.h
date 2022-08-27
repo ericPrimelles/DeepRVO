@@ -70,6 +70,7 @@ private:
     float gamma, tau, ou_theta = 0.15f, ou_sigma = 0.4f;
     int64_t Ain_dims, Aout_dims, Cin_dims, Cout_dims;
 	
+	
 
 
     
