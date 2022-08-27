@@ -78,7 +78,7 @@ torch::Tensor MADDPG::chooseAction(torch::Tensor obs, torch::Device device,bool 
     }
     if (use_rnd)
     {
-        actions += this->ou_sigma * torch::rand(actions.sizes());
+        actions += this->ou_sigma * torch::rand(actions.sizes()).to(device);
     }
     // std::cout << actions[0].sizes() << endl;
     return actions;
