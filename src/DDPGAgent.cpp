@@ -14,6 +14,13 @@ DDPGAgent::DDPGAgent(int64_t Ain_dims, int64_t Aout_dims, std::vector<int64_t> A
     this->Aout_dims = Cout_dims;
     this->gamma = gamma;
     this->tau = tau;
+    if(torch::cuda::is_available()){
+        this->device = torch::Device(torch::kCUDA);
+    }
+    this->a_n->to(device);
+    this->c_n->to(device);
+    this->target_a_n->to(device);
+    this->target_c_n->to(device);
 }
 
 DDPGAgent::~DDPGAgent()

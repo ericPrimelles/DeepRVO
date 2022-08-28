@@ -67,12 +67,12 @@ int main(int argc, char **argv)
    if (torch::cuda::is_available()){
       cout << "CUDA is available" << endl;
       device = torch::Device(torch::kCUDA);
-      for(int i = 0; i < program.getNAgents(); i ++){
+      /*for(int i = 0; i < program.getNAgents(); i ++){
       program.getAgent(i)->a_n->to(device);
       program.getAgent(i)->c_n->to(device);
       program.getAgent(i)->target_a_n->to(device);
-      program.getAgent(i)->target_c_n->to(device);
-   }
+      program.getAgent(i)->target_c_n->to(device);*/
+   //}
    } else{
       cout << "CUDA isn't available. Using CPU" << endl;
    }
@@ -103,7 +103,7 @@ void Train(Environment *env, MADDPG program)
          std::cout << "TimeStep:" << j << "/" << T << " Rewards:"
                    << "    " << avg_reward << std::endl;
          a.obs = env->getObservation().to(device);
-         a.actions = program.chooseAction(a.obs, device,true,memory->ready()).to(device);
+         a.actions = program.chooseAction(a.obs, true,memory->ready()).to(device);
          a.rewards = env->step(a.actions).to(device);
          a.obs_1 = env->getObservation().to(device);
          a.done = env->isDone();
@@ -114,7 +114,7 @@ void Train(Environment *env, MADDPG program)
          
          sampledTrans = memory->sampleBuffer();
          if (memory->ready())
-            program.Train(sampledTrans, device);
+            program.Train(sampledTrans);
 
          step_rewards += torch::mean(a.rewards).item<float>();
          avg_reward = step_rewards / (j + 1);

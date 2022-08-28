@@ -5,9 +5,10 @@
 
 using std::cout, std::endl;
 
-MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vector<int64_t> Ah_dims, int64_t Cin_dims, int64_t Cout_dims, std::vector<int64_t> Ch_dims,
-               size_t scenario, float alpha, float beta, size_t fc1, size_t fc2, size_t T, float gamma, float tau, float ou_sigma,
-               std::string path)
+MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vector<int64_t> Ah_dims, int64_t Cin_dims,
+           int64_t Cout_dims, std::vector<int64_t> Ch_dims, size_t scenario, float alpha, 
+           float beta, size_t fc1, size_t fc2, size_t T, float gamma, float tau, float ou_sigma, 
+           std::string path)
 {
     this->env = sim;
     this->Ain_dims = Ain_dims;
@@ -24,7 +25,11 @@ MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vecto
     this->gamma = gamma;
     this->tau = tau;
     this->path = path;
-
+    
+    if (torch::cuda::is_available())
+        this->device = torch::Device(torch::kCUDA);
+    
+   
     // this->agents.reserve(this->n_agents);
     
     for (size_t i = 0; i < n_agents; i++)
@@ -62,7 +67,7 @@ void MADDPG::loadCheckpoint()
 }
 
 
-torch::Tensor MADDPG::chooseAction(torch::Tensor obs, torch::Device device,bool use_rnd, bool use_net)
+torch::Tensor MADDPG::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net)
 {
     cout << "From MADDPG" << this->n_agents << endl;
     torch::Tensor actions = torch::zeros({(int64_t)this->n_agents, 8}, torch::dtype(torch::kFloat32)).to(device);
@@ -84,10 +89,10 @@ torch::Tensor MADDPG::chooseAction(torch::Tensor obs, torch::Device device,bool 
     return actions;
 }
 
-void MADDPG::Train(vector<ReplayBuffer::Transition> sampledTrans, torch::Device device)
+void MADDPG::Train(vector<ReplayBuffer::Transition> sampledTrans)
 {
 
-    this->learn(sampledTrans, device);
+    this->learn(sampledTrans);
 }
 
 void MADDPG::Test(size_t epochs)
@@ -117,7 +122,7 @@ void MADDPG::visualize()
     std::cout << std::endl;
 }
 
-void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans, torch::Device device)
+void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
 {
     // Cut from here
     for (size_t agent = 0; agent < this->n_agents; agent++)
