@@ -76,7 +76,7 @@ torch::Tensor MADDPG::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net
     {
         for (size_t i = 0; i < this->n_agents; i++)
         {
-            actions[i] = this->agents[i]->sampleAction(obs[i], use_rnd, use_net);
+            actions = this->eval(obs).to(device);
 
             // std::cout << i << std::endl;
         }
