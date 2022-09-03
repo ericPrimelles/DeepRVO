@@ -1,2 +1,2 @@
-/usr/bin/ar qc libRVO.a CMakeFiles/RVO.dir/RVOSimulator.cpp.o CMakeFiles/RVO.dir/Agent.cpp.o CMakeFiles/RVO.dir/KdTree.cpp.o CMakeFiles/RVO.dir/Obstacle.cpp.o CMakeFiles/RVO.dir/Environment.cpp.o CMakeFiles/RVO.dir/MADDPG.cpp.o CMakeFiles/RVO.dir/Buffer.cpp.o CMakeFiles/RVO.dir/DDPGAgent.cpp.o
+/usr/bin/ar qc libRVO.a CMakeFiles/RVO.dir/RVOSimulator.cpp.o CMakeFiles/RVO.dir/Agent.cpp.o CMakeFiles/RVO.dir/KdTree.cpp.o CMakeFiles/RVO.dir/Obstacle.cpp.o CMakeFiles/RVO.dir/Environment.cpp.o CMakeFiles/RVO.dir/MADDPG.cpp.o CMakeFiles/RVO.dir/Buffer.cpp.o CMakeFiles/RVO.dir/DDPGAgent.cpp.o CMakeFiles/RVO.dir/MADDPGMix.cpp.o
 /usr/bin/ranlib libRVO.a

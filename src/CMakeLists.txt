@@ -69,7 +69,7 @@ set(RVO_SOURCES
 #add_library(RVO ${RVO_HEADERS} ${RVO_SOURCES})
 
 add_library(RVO RVO.h RVOSimulator.h RVOSimulator.cpp Vector2.h Agent.h Agent.cpp Definitions.h KdTree.cpp KdTree.h Obstacle.cpp Obstacle.h 
-	Environment.h Environment.cpp MADDPG.h MADDPG.cpp  Buffer.h Buffer.cpp DDPGAgent.h  DDPGAgent.cpp)
+	Environment.h Environment.cpp MADDPG.h MADDPG.cpp  Buffer.h Buffer.cpp DDPGAgent.h  DDPGAgent.cpp MADDPGMix.h MADDPGMix.cpp)
 target_link_libraries(RVO "${TORCH_LIBRARIES}")
 install(FILES ${RVO_HEADERS} DESTINATION include)
 install(TARGETS RVO DESTINATION lib)

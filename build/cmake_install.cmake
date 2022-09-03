@@ -1,4 +1,4 @@
-# Install script for directory: /media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2
+# Install script for directory: /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src/cmake_install.cmake")
-  include("/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/examples/cmake_install.cmake")
+  include("/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src/cmake_install.cmake")
+  include("/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -14,13 +14,13 @@
 #include"RVO.h"
 #endif
 
-#ifdef __APPLE__
+/*#ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
 #include <GL/freeglut.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
-#endif
+#endif*/
 
 using namespace RVO;
 using namespace std;
@@ -47,6 +47,8 @@ public:
     inline Vector2 getAgentPrefVel(size_t i){return this->sim->getAgentPrefVelocity(i);}
     inline float getTimeStep(){return this->timestep;}
     inline size_t getActionSpace(){return 8;}
+    inline Vector2 getAgentGoal(size_t i){ return this->goals[i];}
+    inline Vector2 getAction (size_t i){ return this->actions[i];}
     ~Environment();
 
 private:

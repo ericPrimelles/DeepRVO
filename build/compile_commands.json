@@ -1,62 +1,67 @@
 [
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/RVOSimulator.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/RVOSimulator.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/RVOSimulator.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/RVOSimulator.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/RVOSimulator.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/Agent.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Agent.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/Agent.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/Agent.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/Agent.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/KdTree.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/KdTree.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/KdTree.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/KdTree.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/KdTree.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/Obstacle.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Obstacle.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/Obstacle.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/Obstacle.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/Obstacle.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/Environment.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Environment.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/Environment.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/Environment.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/Environment.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/MADDPG.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/MADDPG.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/MADDPG.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/MADDPG.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/MADDPG.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/MADDPG.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/Buffer.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/Buffer.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/Buffer.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/Buffer.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/Buffer.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/src",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/DDPGAgent.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src/DDPGAgent.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/DDPGAgent.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/DDPGAgent.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/DDPGAgent.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/examples",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I\"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src\" -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/DeepNav.dir/main.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/main.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/main.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/src",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++17 -o CMakeFiles/RVO.dir/MADDPGMix.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/MADDPGMix.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src/MADDPGMix.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/examples",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I\"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src\" -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleRoadmap.dir/ExampleRoadmap.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleRoadmap.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleRoadmap.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/DeepNav.dir/main.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/main.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/main.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/examples",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I\"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src\" -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleCircle.dir/ExampleCircle.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleCircle.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleCircle.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleRoadmap.dir/ExampleRoadmap.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleRoadmap.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleRoadmap.cpp"
 },
 {
-  "directory": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/build/examples",
-  "command": "/usr/bin/g++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I\"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/src\" -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleBlocks.dir/ExampleBlocks.cpp.o -c \"/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleBlocks.cpp\"",
-  "file": "/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleBlocks.cpp"
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleCircle.dir/ExampleCircle.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleCircle.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleCircle.cpp"
+},
+{
+  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples",
+  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleBlocks.dir/ExampleBlocks.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleBlocks.cpp",
+  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleBlocks.cpp"
 }
 ]

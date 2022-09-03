@@ -7,6 +7,12 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "../CMakeLists.txt"
+  "CMakeFiles/3.18.4/CMakeCCompiler.cmake"
+  "CMakeFiles/3.18.4/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.18.4/CMakeSystem.cmake"
+  "../examples/CMakeLists.txt"
+  "../src/CMakeLists.txt"
   "/home/eric/libtorch/share/cmake/Caffe2/Caffe2Config.cmake"
   "/home/eric/libtorch/share/cmake/Caffe2/Caffe2ConfigVersion.cmake"
   "/home/eric/libtorch/share/cmake/Caffe2/Caffe2Targets-release.cmake"
@@ -17,12 +23,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/eric/libtorch/share/cmake/Caffe2/public/utils.cmake"
   "/home/eric/libtorch/share/cmake/Torch/TorchConfig.cmake"
   "/home/eric/libtorch/share/cmake/Torch/TorchConfigVersion.cmake"
-  "../CMakeLists.txt"
-  "CMakeFiles/3.18.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.18.4/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.18.4/CMakeSystem.cmake"
-  "../examples/CMakeLists.txt"
-  "../src/CMakeLists.txt"
   "/usr/share/cmake-3.18/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.18/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -39,9 +39,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.18/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.18/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.18/Modules/Compiler/GNU.cmake"
-  "/usr/share/cmake-3.18/Modules/FindGLU.cmake"
-  "/usr/share/cmake-3.18/Modules/FindGLUT.cmake"
-  "/usr/share/cmake-3.18/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.18/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.18/Modules/FindThreads.cmake"
@@ -51,7 +48,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.18/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.18/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.18/Modules/Platform/UnixPaths.cmake"
-  "/usr/share/cmake-3.18/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:

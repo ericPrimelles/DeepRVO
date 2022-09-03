@@ -4,6 +4,7 @@
 #include "RVO.h"
 #include "Environment.h"
 #include "MADDPG.h"
+#include "MADDPGMix.h"
 #include "Buffer.h"
 
 using namespace std;
@@ -50,7 +51,7 @@ void updateVisualization();
 int main(int argc, char **argv)
 {
    env->make(1, false);
-   MADDPG program(env, 4, 8, {32, 16, 8}, 4*env->getNAgents() + 8*env->getNAgents(), 1, {32, 16, 8}, 0);
+   MADDPGMix program(env, 4, 8, {32, 16, 8}, 4*env->getNAgents() + 8*env->getNAgents(), 1, {32, 16, 8}, 0);
 
    /*glutInit(&argc, argv);
    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
@@ -78,64 +79,14 @@ int main(int argc, char **argv)
    }
    
    
-   Train(env, program);
+   program.Train(k_epochs, T);
 
   
    
    return 0;
 }
 
-void Train(Environment *env, MADDPG program)
-{
 
-   ReplayBuffer::Buffer *memory = new ReplayBuffer::Buffer();
-   ReplayBuffer::Transition a;
-   vector<ReplayBuffer::Transition> sampledTrans;
-
-   for (size_t i = 0; i < k_epochs; i++)
-   {
-      env->reset();
-      avg_reward = 00.f;
-      step_rewards = 00.f;
-      for (size_t j = 0; j < T || env->isDone(); j++)
-      {
-         cout << "Epoch: " << i << "/" << k_epochs << " ";
-         std::cout << "TimeStep:" << j << "/" << T << " Rewards:"
-                   << "    " << avg_reward << std::endl;
-         a.obs = env->getObservation().to(device);
-         a.actions = program.chooseAction(a.obs, true,memory->ready()).to(device);
-         a.rewards = env->step(a.actions).to(device);
-         a.obs_1 = env->getObservation().to(device);
-         a.done = env->isDone();
-         memory->storeTransition(a);
-         env->render(j, i);
-
-         cout << "Global time:" << env->getGlobalTime()<< endl;
-         
-         sampledTrans = memory->sampleBuffer();
-         if (memory->ready())
-            program.Train(sampledTrans);
-
-         step_rewards += torch::mean(a.rewards).item<float>();
-         avg_reward = step_rewards / (j + 1);
-         // sampledTrans = memory->sampleBuffer();
-      }
-      if (i % 10 == 0)
-      {
-         std::cout << "Saving..." << std::endl;
-         program.saveCheckpoint();
-      }
-
-      std::ofstream write;
-      write.open("rewards.txt", std::ios::out | std::ios::app);
-      if (write.is_open())
-      {
-         write << avg_reward << "\n";
-      }
-
-      write.close();
-   }
-}
 void Test (Environment * env, MADDPG program, size_t n_epochs){
    
    /*program.loadCheckpoint();
@@ -150,7 +101,7 @@ void Test (Environment * env, MADDPG program, size_t n_epochs){
       }
    }*/
 }
-void InitGL(void) // OpenGL function
+/*void InitGL(void) // OpenGL function
 {
 
    glShadeModel(GL_SMOOTH);              // Enable Smooth Shading
@@ -269,6 +220,6 @@ void updateVisualization()
           glVertex3f(simi.x(), simi.y(), 1.0f);
           glEnd();
       }*/
-      glPopMatrix();
+     /* glPopMatrix();
    }
-}
+}*/

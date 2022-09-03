@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RVO.dir/Environment.cpp.o"
   "CMakeFiles/RVO.dir/KdTree.cpp.o"
   "CMakeFiles/RVO.dir/MADDPG.cpp.o"
+  "CMakeFiles/RVO.dir/MADDPGMix.cpp.o"
   "CMakeFiles/RVO.dir/Obstacle.cpp.o"
   "CMakeFiles/RVO.dir/RVOSimulator.cpp.o"
   "libRVO.a"

@@ -24,7 +24,7 @@ public:
     void saveCheckpoint();
     void loadCheckpoint();
     torch::Tensor chooseAction(torch::Tensor obs, bool use_rnd = true, bool use_net = true);
-    void Train(vector<ReplayBuffer::Transition> sampledTrans);
+    void Train(size_t, size_t);
     void Test(size_t epochs);
     size_t getNAgents(){return n_agents;}
     inline DDPGAgent* getAgent(size_t i){ return agents[i];}

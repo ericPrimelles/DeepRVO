@@ -30,7 +30,7 @@ cmath
 ostream
 -
 
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/ExampleRoadmap.cpp
+/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleRoadmap.cpp
 cmath
 -
 cstdlib
@@ -46,5 +46,5 @@ vector
 omp.h
 -
 RVO.h
-/media/eric/New Volume/Maestry/III_Semestre/Tesis/Code/Mine/rvo2-2.0.1/RVO2/examples/RVO.h
+/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/RVO.h
 

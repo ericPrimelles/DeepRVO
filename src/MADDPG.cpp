@@ -2,13 +2,12 @@
 #include <iostream>
 #include <fstream>
 
-
 using std::cout, std::endl;
 
 MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vector<int64_t> Ah_dims, int64_t Cin_dims,
-           int64_t Cout_dims, std::vector<int64_t> Ch_dims, size_t scenario, float alpha, 
-           float beta, size_t fc1, size_t fc2, size_t T, float gamma, float tau, float ou_sigma, 
-           std::string path)
+               int64_t Cout_dims, std::vector<int64_t> Ch_dims, size_t scenario, float alpha,
+               float beta, size_t fc1, size_t fc2, size_t T, float gamma, float tau, float ou_sigma,
+               std::string path)
 {
     this->env = sim;
     this->Ain_dims = Ain_dims;
@@ -25,13 +24,12 @@ MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vecto
     this->gamma = gamma;
     this->tau = tau;
     this->path = path;
-    
+
     if (torch::cuda::is_available())
         this->device = torch::Device(torch::kCUDA);
-    
-   
+
     // this->agents.reserve(this->n_agents);
-    
+
     for (size_t i = 0; i < n_agents; i++)
     {
         this->agents.push_back(new DDPGAgent(this->Ain_dims, this->Aout_dims, Ah_dims, this->Cin_dims, this->Cout_dims, Ch_dims,
@@ -42,7 +40,6 @@ MADDPG::MADDPG(Environment *sim, int64_t Ain_dims, int64_t Aout_dims, std::vecto
 
 MADDPG::~MADDPG()
 {
-   
 }
 
 void MADDPG::saveCheckpoint()
@@ -58,14 +55,12 @@ void MADDPG::saveCheckpoint()
 void MADDPG::loadCheckpoint()
 {
     cout << "...loading chekpoint..." << endl;
-    
+
     for (size_t i = 0; i < this->n_agents; i++)
     {
         agents[i]->loadModel(this->path, i);
     }
-    
 }
-
 
 torch::Tensor MADDPG::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net)
 {
@@ -89,10 +84,56 @@ torch::Tensor MADDPG::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net
     return actions;
 }
 
-void MADDPG::Train(vector<ReplayBuffer::Transition> sampledTrans)
+void MADDPG::Train(size_t k_epochs, size_t T)
 {
 
-    this->learn(sampledTrans);
+    ReplayBuffer::Buffer *memory = new ReplayBuffer::Buffer();
+    ReplayBuffer::Transition a;
+    vector<ReplayBuffer::Transition> sampledTrans;
+
+    for (size_t i = 0; i < k_epochs; i++)
+    {
+        env->reset();
+        float avg_reward = 00.f;
+        float step_rewards = 00.f;
+        for (size_t j = 0; j < T || env->isDone(); j++)
+        {
+            cout << "Epoch: " << i << "/" << k_epochs << " ";
+            std::cout << "TimeStep:" << j << "/" << T << " Rewards:"
+                      << "    " << avg_reward << std::endl;
+            a.obs = env->getObservation().to(device);
+            a.actions = this->chooseAction(a.obs, true, memory->ready()).to(device);
+            a.rewards = env->step(a.actions).to(device);
+            a.obs_1 = env->getObservation().to(device);
+            a.done = env->isDone();
+            memory->storeTransition(a);
+            env->render(j, i);
+
+            cout << "Global time:" << env->getGlobalTime() << endl;
+
+            sampledTrans = memory->sampleBuffer();
+            if (memory->ready())
+                this->learn(sampledTrans);
+
+            step_rewards += torch::mean(a.rewards).item<float>();
+            avg_reward = step_rewards / (j + 1);
+            // sampledTrans = memory->sampleBuffer();
+        }
+        if (i % 10 == 0)
+        {
+            std::cout << "Saving..." << std::endl;
+            this->saveCheckpoint();
+        }
+
+        std::ofstream write;
+        write.open("rewards.txt", std::ios::out | std::ios::app);
+        if (write.is_open())
+        {
+            write << avg_reward << "\n";
+        }
+
+        write.close();
+    }
 }
 
 void MADDPG::Test(size_t epochs)
@@ -133,24 +174,17 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
         float memsize_scale = 1.0f / static_cast<float>(this->batch_size);
         torch::Tensor q_loss = torch::zeros({1}).to(device);
         torch::Tensor a_loss = torch::zeros({1}).to(device);
-        
-      
 
         for (auto &t : sampledTrans)
         {
             torch::Tensor target;
             torch::Tensor ret;
-            
 
             if (!t.done)
             {
-                
-                
-                
-                
+
                 ret = (this->gamma * agents[agent]->target_c_n(torch::cat({t.obs_1.flatten(), this->eval(t.obs_1).flatten().to(device)}).to(device)).detach()).to(device);
                 target = (t.rewards[agent] + ret).to(device);
-                
             }
             else
             {
@@ -158,20 +192,17 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
                 target = t.rewards[agent] * torch::ones({8}).to(device);
             }
 
-            
             torch::Tensor seg_loss = this->agents[agent]->target_c_n(torch::cat({t.obs.flatten(), t.actions.flatten()}).detach()).to(device) - target;
-            
+
             q_loss += memsize_scale * seg_loss * seg_loss;
-            
         }
         q_loss.backward();
         this->agents[agent]->c_optim.step();
-        
+
         //*traj_q_loss += q_loss.item<float>();
         for (auto &t : sampledTrans)
         {
             a_loss -= memsize_scale * this->agents[agent]->c_n(torch::cat({t.obs.flatten(), this->eval(t.obs).flatten().to(device)}).detach()).to(device);
-            
         }
         a_loss.backward();
         this->agents[agent]->a_optim.step();
@@ -180,18 +211,15 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
     }
 }
 
-torch::Tensor MADDPG::eval(torch::Tensor obs){
-    
+torch::Tensor MADDPG::eval(torch::Tensor obs)
+{
+
     torch::Tensor evaluation = torch::empty({(int64_t)this->getNAgents(), 8});
-    
-    
+
     for (size_t agentx = 0; agentx < this->getNAgents(); agentx++)
-                {
-                    evaluation[agentx] = this->agents[agentx]->target_a_n(obs[agentx]);
-                    
-                }
-    
-    
+    {
+        evaluation[agentx] = this->agents[agentx]->target_a_n(obs[agentx]);
+    }
+
     return evaluation;
-    
 }
