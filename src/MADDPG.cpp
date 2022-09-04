@@ -65,7 +65,7 @@ void MADDPG::loadCheckpoint()
 torch::Tensor MADDPG::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net)
 {
     cout << "From MADDPG" << this->n_agents << endl;
-    torch::Tensor actions = torch::zeros({(int64_t)this->n_agents, 8}, torch::dtype(torch::kFloat32)).to(device);
+    torch::Tensor actions = torch::zeros({(int64_t)this->n_agents, (int64_t)this->env->getActionSpace()}, torch::dtype(torch::kFloat32)).to(device);
 
     if (use_net)
     {
@@ -189,7 +189,7 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
             else
             {
 
-                target = t.rewards[agent] * torch::ones({8}).to(device);
+                target = t.rewards[agent] * torch::ones({2}).to(device);
             }
 
             torch::Tensor seg_loss = this->agents[agent]->target_c_n(torch::cat({t.obs.flatten(), t.actions.flatten()}).detach()).to(device) - target;
@@ -214,7 +214,7 @@ void MADDPG::learn(vector<ReplayBuffer::Transition> sampledTrans)
 torch::Tensor MADDPG::eval(torch::Tensor obs)
 {
 
-    torch::Tensor evaluation = torch::empty({(int64_t)this->getNAgents(), 8});
+    torch::Tensor evaluation = torch::empty({(int64_t)this->getNAgents(), (int64_t )this->env->getActionSpace()});
 
     for (size_t agentx = 0; agentx < this->getNAgents(); agentx++)
     {

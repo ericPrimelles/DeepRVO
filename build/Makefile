@@ -201,45 +201,6 @@ DeepNav/fast:
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/DeepNav.dir/build.make examples/CMakeFiles/DeepNav.dir/build
 .PHONY : DeepNav/fast
 
-#=============================================================================
-# Target rules for targets named ExampleRoadmap
-
-# Build rule for target.
-ExampleRoadmap: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleRoadmap
-.PHONY : ExampleRoadmap
-
-# fast build rule for target.
-ExampleRoadmap/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleRoadmap.dir/build.make examples/CMakeFiles/ExampleRoadmap.dir/build
-.PHONY : ExampleRoadmap/fast
-
-#=============================================================================
-# Target rules for targets named ExampleCircle
-
-# Build rule for target.
-ExampleCircle: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleCircle
-.PHONY : ExampleCircle
-
-# fast build rule for target.
-ExampleCircle/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleCircle.dir/build.make examples/CMakeFiles/ExampleCircle.dir/build
-.PHONY : ExampleCircle/fast
-
-#=============================================================================
-# Target rules for targets named ExampleBlocks
-
-# Build rule for target.
-ExampleBlocks: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExampleBlocks
-.PHONY : ExampleBlocks
-
-# fast build rule for target.
-ExampleBlocks/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleBlocks.dir/build.make examples/CMakeFiles/ExampleBlocks.dir/build
-.PHONY : ExampleBlocks/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -253,9 +214,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... DeepNav"
-	@echo "... ExampleBlocks"
-	@echo "... ExampleCircle"
-	@echo "... ExampleRoadmap"
 	@echo "... RVO"
 .PHONY : help
 

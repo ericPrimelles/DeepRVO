@@ -51,7 +51,7 @@ void updateVisualization();
 int main(int argc, char **argv)
 {
    env->make(1, false);
-   MADDPGMix program(env, 4, 8, {32, 16, 8}, 4*env->getNAgents() + 8*env->getNAgents(), 1, {32, 16, 8}, 0);
+   MADDPGMix program(env, 4, 2, {32, 16, 8}, 4*env->getNAgents() + 2*env->getNAgents(), 1, {32, 16, 8}, 0);
 
    /*glutInit(&argc, argv);
    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);

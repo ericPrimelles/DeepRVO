@@ -94,9 +94,6 @@ clean: examples/clean
 
 # Recursive "all" directory target.
 examples/all: examples/CMakeFiles/DeepNav.dir/all
-examples/all: examples/CMakeFiles/ExampleRoadmap.dir/all
-examples/all: examples/CMakeFiles/ExampleCircle.dir/all
-examples/all: examples/CMakeFiles/ExampleBlocks.dir/all
 
 .PHONY : examples/all
 
@@ -107,9 +104,6 @@ examples/preinstall:
 
 # Recursive "clean" directory target.
 examples/clean: examples/CMakeFiles/DeepNav.dir/clean
-examples/clean: examples/CMakeFiles/ExampleRoadmap.dir/clean
-examples/clean: examples/CMakeFiles/ExampleCircle.dir/clean
-examples/clean: examples/CMakeFiles/ExampleBlocks.dir/clean
 
 .PHONY : examples/clean
 
@@ -138,7 +132,7 @@ src/clean: src/CMakeFiles/RVO.dir/clean
 src/CMakeFiles/RVO.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/RVO.dir/build.make src/CMakeFiles/RVO.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/RVO.dir/build.make src/CMakeFiles/RVO.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18 "Built target RVO"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Built target RVO"
 .PHONY : src/CMakeFiles/RVO.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,87 +178,6 @@ DeepNav: examples/CMakeFiles/DeepNav.dir/rule
 examples/CMakeFiles/DeepNav.dir/clean:
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/DeepNav.dir/build.make examples/CMakeFiles/DeepNav.dir/clean
 .PHONY : examples/CMakeFiles/DeepNav.dir/clean
-
-#=============================================================================
-# Target rules for target examples/CMakeFiles/ExampleRoadmap.dir
-
-# All Build rule for target.
-examples/CMakeFiles/ExampleRoadmap.dir/all: src/CMakeFiles/RVO.dir/all
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleRoadmap.dir/build.make examples/CMakeFiles/ExampleRoadmap.dir/depend
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleRoadmap.dir/build.make examples/CMakeFiles/ExampleRoadmap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles --progress-num=7,8 "Built target ExampleRoadmap"
-.PHONY : examples/CMakeFiles/ExampleRoadmap.dir/all
-
-# Build rule for subdir invocation for target.
-examples/CMakeFiles/ExampleRoadmap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/ExampleRoadmap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles 0
-.PHONY : examples/CMakeFiles/ExampleRoadmap.dir/rule
-
-# Convenience name for target.
-ExampleRoadmap: examples/CMakeFiles/ExampleRoadmap.dir/rule
-
-.PHONY : ExampleRoadmap
-
-# clean rule for target.
-examples/CMakeFiles/ExampleRoadmap.dir/clean:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleRoadmap.dir/build.make examples/CMakeFiles/ExampleRoadmap.dir/clean
-.PHONY : examples/CMakeFiles/ExampleRoadmap.dir/clean
-
-#=============================================================================
-# Target rules for target examples/CMakeFiles/ExampleCircle.dir
-
-# All Build rule for target.
-examples/CMakeFiles/ExampleCircle.dir/all: src/CMakeFiles/RVO.dir/all
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleCircle.dir/build.make examples/CMakeFiles/ExampleCircle.dir/depend
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleCircle.dir/build.make examples/CMakeFiles/ExampleCircle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles --progress-num=5,6 "Built target ExampleCircle"
-.PHONY : examples/CMakeFiles/ExampleCircle.dir/all
-
-# Build rule for subdir invocation for target.
-examples/CMakeFiles/ExampleCircle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/ExampleCircle.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles 0
-.PHONY : examples/CMakeFiles/ExampleCircle.dir/rule
-
-# Convenience name for target.
-ExampleCircle: examples/CMakeFiles/ExampleCircle.dir/rule
-
-.PHONY : ExampleCircle
-
-# clean rule for target.
-examples/CMakeFiles/ExampleCircle.dir/clean:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleCircle.dir/build.make examples/CMakeFiles/ExampleCircle.dir/clean
-.PHONY : examples/CMakeFiles/ExampleCircle.dir/clean
-
-#=============================================================================
-# Target rules for target examples/CMakeFiles/ExampleBlocks.dir
-
-# All Build rule for target.
-examples/CMakeFiles/ExampleBlocks.dir/all: src/CMakeFiles/RVO.dir/all
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleBlocks.dir/build.make examples/CMakeFiles/ExampleBlocks.dir/depend
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleBlocks.dir/build.make examples/CMakeFiles/ExampleBlocks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles --progress-num=3,4 "Built target ExampleBlocks"
-.PHONY : examples/CMakeFiles/ExampleBlocks.dir/all
-
-# Build rule for subdir invocation for target.
-examples/CMakeFiles/ExampleBlocks.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/ExampleBlocks.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/CMakeFiles 0
-.PHONY : examples/CMakeFiles/ExampleBlocks.dir/rule
-
-# Convenience name for target.
-ExampleBlocks: examples/CMakeFiles/ExampleBlocks.dir/rule
-
-.PHONY : ExampleBlocks
-
-# clean rule for target.
-examples/CMakeFiles/ExampleBlocks.dir/clean:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/ExampleBlocks.dir/build.make examples/CMakeFiles/ExampleBlocks.dir/clean
-.PHONY : examples/CMakeFiles/ExampleBlocks.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -46,9 +46,9 @@ public:
     inline float getGlobalTime(){ return this->time;}
     inline Vector2 getAgentPrefVel(size_t i){return this->sim->getAgentPrefVelocity(i);}
     inline float getTimeStep(){return this->timestep;}
-    inline size_t getActionSpace(){return 8;}
+    inline size_t getActionSpace(){return 2;}
     inline Vector2 getAgentGoal(size_t i){ return this->goals[i];}
-    inline Vector2 getAction (size_t i){ return this->actions[i];}
+    //inline Vector2 getAction (size_t i){ return this->actions[i];}
     ~Environment();
 
 private:
@@ -64,7 +64,7 @@ private:
    
 
     //Parameters
-    vector<Vector2> actions;
+    //vector<Vector2> actions;
     RVOSimulator * sim;
     size_t scenario = 0, sidesize=25;
     float time= 0.0f;

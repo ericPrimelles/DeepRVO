@@ -48,20 +48,5 @@
   "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples",
   "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/DeepNav.dir/main.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/main.cpp",
   "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/main.cpp"
-},
-{
-  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples",
-  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleRoadmap.dir/ExampleRoadmap.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleRoadmap.cpp",
-  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleRoadmap.cpp"
-},
-{
-  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples",
-  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleCircle.dir/ExampleCircle.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleCircle.cpp",
-  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleCircle.cpp"
-},
-{
-  "directory": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/build/examples",
-  "command": "/usr/bin/c++ -DUSE_C10D_GLOO -DUSE_DISTRIBUTED -DUSE_RPC -DUSE_TENSORPIPE -I/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/src -isystem /home/eric/libtorch/include -isystem /home/eric/libtorch/include/torch/csrc/api/include -g -D_GLIBCXX_USE_CXX11_ABI=0 -o CMakeFiles/ExampleBlocks.dir/ExampleBlocks.cpp.o -c /home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleBlocks.cpp",
-  "file": "/home/eric/Maestry/4_Semestre/Tesis/Code/Mine/DeepRVO/examples/ExampleBlocks.cpp"
 }
 ]

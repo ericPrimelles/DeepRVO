@@ -19,7 +19,7 @@ Environment::Environment(size_t n_agents, float time_step, float neighbor_dists,
     this->radius = radius;
     this->max_speed = max_speed;
 
-   actions = {Vector2(1, 0), Vector2(0.707, 0.707), Vector2(0, 1), Vector2(-0.707, 0.707), Vector2(-1, 0), Vector2(-0.707, -0.707),Vector2(0, -1),Vector2(0.707, -0.707)};
+   //actions = {Vector2(1, 0), Vector2(0.707, 0.707), Vector2(0, 1), Vector2(-0.707, 0.707), Vector2(-1, 0), Vector2(-0.707, -0.707),Vector2(0, -1),Vector2(0.707, -0.707)};
    
 }
 
@@ -81,15 +81,15 @@ void Environment::setPrefferedVelocities(torch::Tensor act)
     for (size_t i = 0; i < this->n_agents; i++)
     {
         // Detacching tensors
-        /*x = actions[i][0].item<float>();
-        y = actions[i][1].item<float>();
+        x = act[i][0].item<float>();
+        y = act[i][1].item<float>();
         v_pref_placeholder = Vector2(x, y); // Constructing a new Vector2 with the agent i action
-        */
-        v_pref_placeholder = this->actions[act[i].argmax().item<int>()];
-        /*if (absSq(v_pref_placeholder) > 1.0f)
+        
+        //v_pref_placeholder = this->actions[act[i].argmax().item<int>()];
+        if (absSq(v_pref_placeholder) > 1.0f)
         {
             v_pref_placeholder = RVO::normalize(v_pref_placeholder);
-        } // Normilizing vector*/
+        } // Normilizing vector
 
         this->sim->setAgentPrefVelocity(i, v_pref_placeholder);
     }

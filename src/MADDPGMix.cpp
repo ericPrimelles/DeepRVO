@@ -80,7 +80,7 @@ void MADDPGMix::loadCheckpoint()
 torch::Tensor MADDPGMix::chooseAction(torch::Tensor obs, bool use_rnd, bool use_net)
 {
     cout << "From MADDPGMix" << this->n_agents << endl;
-    torch::Tensor actions = torch::zeros({(int64_t)this->n_agents, 8}, torch::dtype(torch::kFloat32)).to(device);
+    torch::Tensor actions = torch::zeros({(int64_t)this->n_agents, (int64_t)this->env->getActionSpace()}, torch::dtype(torch::kFloat32)).to(device);
 
     if (use_net)
     {
@@ -118,6 +118,7 @@ void MADDPGMix::Train(size_t k_epochs, size_t T)
                       << "    " << avg_reward << std::endl;
             a.obs = env->getObservation().to(device);
             a.actions = this->chooseAction(a.obs, true, memory->ready()).to(device);
+            
             a.rewards = env->step(a.actions).to(device);
             a.obs_1 = env->getObservation().to(device);
             a.done = env->isDone();
@@ -209,13 +210,15 @@ void MADDPGMix::learn(vector<ReplayBuffer::Transition> sampledTrans)
                 
                 
                 ret = (this->gamma * agents[agent]->target_c_n(torch::cat({t.obs_1.flatten(), this->eval(t.obs_1).flatten().to(device)}).to(device)).detach()).to(device);
+                
+
                 target = (t.rewards[agent] + ret).to(device);
                 
             }
             else
             {
 
-                target = t.rewards[agent] * torch::ones({8}).to(device);
+                target = t.rewards[agent] * torch::ones({2}).to(device);
             }
 
             
@@ -242,24 +245,22 @@ void MADDPGMix::learn(vector<ReplayBuffer::Transition> sampledTrans)
 
 torch::Tensor MADDPGMix::eval(torch::Tensor obs){
     
-    torch::Tensor evaluation = torch::empty({(int64_t)this->getNAgents(), 8});
+    torch::Tensor evaluation = torch::empty({(int64_t)this->getNAgents(), (int64_t)this->env->getActionsSpec()});
     Vector2 orca_vel;
-    torch::Tensor action = torch::empty(8);
-    float ang = 0.0f;
+    torch::Tensor action = torch::empty(2).to(device);
+    
     for (size_t agentx = 0; agentx < this->getNAgents(); agentx++)
                 {
                     if (agentx == this->agent_1 or agentx == this->agent_2)
                     {
                         evaluation[agentx] = this->agents[agentx]->target_a_n(obs[agentx]);
+                        
                     }
                     else{
                         orca_vel = this->doOrca(agentx);
-                        for (size_t i = 0; i < 8; i++)
-                        {
-                            ang = atan2(this->env->getAction(i).x(), this->env->getAction(i).y());
-                            action[i] = absSq(Vector2(cos(ang) * orca_vel.x(), sin(ang)) * orca_vel.y()); 
-                        }
+                        action[0] = orca_vel.x(); action[1] = orca_vel.y();
                         evaluation[agentx] = action;
+                        
                     }
                 }
     
